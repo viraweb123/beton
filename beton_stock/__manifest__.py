@@ -12,6 +12,7 @@
         "fleet"
     ],
     "data": [
+        "views/beton_stock_move_line_view.xml"
     ],
     'auto_install': False,
     'installable': True
