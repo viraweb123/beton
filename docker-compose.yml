@@ -9,7 +9,31 @@ services:
       - POSTGRES_DB=odoo
     restart: always             # run as a service
     ports:
-        - 5432:5432
+      - 5432:5432
     volumes:
-        - ./odoo-db-data:/var/lib/postgresql/data/pgdata
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+    networks:
+      - frontend
 
+  odoo14:
+    image: odoo:14
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "8069:8069"
+    tty: true
+    command: -- --database=odoo --db_host=db --db_port=5432 --db_user=odoo --db_password=odoo --load="web" --init="base,web,stock,fleet,beton_stock" --addons-path=/mnt/extra-addons --without-demo=all --dev=all
+    volumes:
+      - ./data:/var/lib/odoo
+      - .:/mnt/extra-addons
+    restart: always             # run as a service
+    networks:
+      - frontend
+
+networks:
+  frontend:
+
+volumes:
+  odoo-db-data:
