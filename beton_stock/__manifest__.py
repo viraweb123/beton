@@ -12,7 +12,9 @@
         "fleet"
     ],
     "data": [
-        "views/beton_stock_move_line_view.xml"
+        "views/beton_stock_move_line_view.xml",
+        "views/beton_stock_move_menu_view.xml",
+        "security/ir.model.access.csv"
     ],
     'auto_install': False,
     'installable': True

@@ -12,4 +12,34 @@
 			</xpath>
 		</field>
 	</record>
+	<record id="view_stock_move_line_detailed_operation_list" model="ir.ui.view">
+		<field name="model">stock.move.line</field>
+		<field name="inherit_id" ref="stock.view_move_line_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='qty_done']" position='before'>
+				<field name="driver_id" invisible="0"/>
+				<field name="vehicle_id" invisible="0"/>
+				<field name="empty_weight_id" invisible="0"/>
+				<field name="full_weight_id" invisible="0"/>
+			</xpath>
+		</field>
+	</record>
+	<record id="view_stock_move_line_detailed_operation_form" model="ir.ui.view">
+		<field name="model">stock.move.line</field>
+		<field name="inherit_id" ref="stock.view_move_line_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="/form/sheet/group/group[2]" position="after">
+				<group>
+					<field name="driver_id" />
+				</group>
+				<group>
+					<field name="vehicle_id" />
+				</group>
+				<group>
+					<field name="empty_weight_id" />
+					<field name="full_weight_id" />
+				</group>
+			</xpath>
+		</field>
+	</record>
 </odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record
+			id="vw_beton_model_detailedoperations_action"
+			model="ir.actions.act_window">
+		<field name="name">Detailed Operations</field>
+		<field name="res_model">stock.move.line</field>
+		<field name="view_mode">tree,form,activity,kanban</field>
+		<field name="help" type="html">
+			<p>List of detailed operations to manage.</p>
+		</field>
+	</record>
+	<menuitem
+			id="vw_beton_menu_detailedoperations"
+			parent="stock.menu_stock_warehouse_mgmt"
+			name="Detailed Operations"
+			action="vw_beton_model_detailedoperations_action" />
+</odoo>
