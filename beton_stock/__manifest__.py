@@ -14,6 +14,8 @@
     "data": [
         "views/beton_stock_move_line_view.xml",
         "views/beton_stock_move_menu_view.xml",
+        "report/moveline.xml",
+        "report/testtemplate.xml",
         "security/ir.model.access.csv"
     ],
     'auto_install': False,

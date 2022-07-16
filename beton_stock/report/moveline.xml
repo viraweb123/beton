@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_moveline_id_card" model="ir.actions.report">
+        <field name="name">Move line report</field>
+        <field name="model">stock.move.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">beton_stock.report_moveline_id_card</field>
+        <field name="report_file">beton_stock.report_moveline_id_card</field>
+        <field name="print_report_name">'Stock - %s' % (object.driver_id)</field>
+        <field name="binding_model_id" ref="model_stock_move_line"/>
+    </record>
+</odoo>
