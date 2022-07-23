@@ -10,6 +10,9 @@
 				<field name="empty_weight_id" invisible="0"/>
 				<field name="full_weight_id" invisible="0"/>
 			</xpath>
+			<xpath expr="//field[@name='product_uom_id']" position='after'>
+				<button name="print_move_line_action" string="" type="object" icon="gtk-execute"/>
+			</xpath>
 		</field>
 	</record>
 	<record id="view_stock_move_line_detailed_operation_list" model="ir.ui.view">
@@ -21,6 +24,9 @@
 				<field name="vehicle_id" invisible="0"/>
 				<field name="empty_weight_id" invisible="0"/>
 				<field name="full_weight_id" invisible="0"/>
+			</xpath>
+			<xpath expr="//field[@name='product_uom_id']" position='after'>
+				<button name="print_move_line_action" string="" type="object" icon="gtk-execute"/>
 			</xpath>
 		</field>
 	</record>
@@ -39,6 +45,9 @@
 					<field name="empty_weight_id" />
 					<field name="full_weight_id" />
 				</group>
+			</xpath>
+			<xpath expr="/form/sheet/group/group[5]" position="after">
+				<button name="print_move_line_action" string="Print" type="object" icon="gtk-execute"/>
 			</xpath>
 		</field>
 	</record>
