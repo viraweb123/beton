@@ -11,7 +11,7 @@
 				<field name="full_weight_id" invisible="0"/>
 			</xpath>
 			<xpath expr="//field[@name='product_uom_id']" position='after'>
-				<button name="print_move_line_action" string="" type="object" icon="gtk-execute"/>
+				<button name="print_move_line_action" string="" type="object" icon="fa-print"/>
 			</xpath>
 		</field>
 	</record>
@@ -26,7 +26,7 @@
 				<field name="full_weight_id" invisible="0"/>
 			</xpath>
 			<xpath expr="//field[@name='product_uom_id']" position='after'>
-				<button name="print_move_line_action" string="" type="object" icon="gtk-execute"/>
+				<button name="print_move_line_action" string="" type="object" icon="fa-print"/>
 			</xpath>
 		</field>
 	</record>
@@ -47,7 +47,7 @@
 				</group>
 			</xpath>
 			<xpath expr="/form/sheet/group/group[5]" position="after">
-				<button name="print_move_line_action" string="Print" type="object" icon="gtk-execute"/>
+				<button name="print_move_line_action" string="Print" type="object" icon="fa-print"/>
 			</xpath>
 		</field>
 	</record>
